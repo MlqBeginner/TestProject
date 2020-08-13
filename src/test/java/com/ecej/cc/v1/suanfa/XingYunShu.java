@@ -24,7 +24,6 @@ public class XingYunShu {
 
     // 判断是否为幸运数
     public boolean isLuckyNumber(Integer num) {
-        System.out.println(22);
         List<Integer> integerList = splitNum(num);
         Integer count = 0;
         for (Integer l : integerList) {
