@@ -59,6 +59,7 @@ public class TestController {
 
         map.put("total", 4);
         map.put("total", 5);
+        map.put("total", 6);
         return map;
 
     }
