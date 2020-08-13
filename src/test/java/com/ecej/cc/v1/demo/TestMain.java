@@ -29,8 +29,6 @@ public class TestMain {
         System.out.println(55);
 
         System.out.println(22);
-
-        System.out.println(55);
     }
 
     @Test
