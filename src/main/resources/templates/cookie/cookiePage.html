@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CookiePage</title>
+    <script src="/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="/js/cookie/jquery.cookie.js"></script>
+    <script src="/js/cookie/jquery.base64.js"></script>
+    <script type="text/javascript" src="/js/cookie/cookie_0.1.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+
+    $(function () {
+
+        var _string = $.getCookie("string");
+        var _map = $.getCookie("map");
+
+        alert(_string + "--" + _map["a"]);
+    });
+
+</script>
+</body>
+</html>

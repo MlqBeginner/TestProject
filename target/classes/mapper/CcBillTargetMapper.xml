@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tree.ztreedemo.pojo.ecej.CcBillTargetPo">
+	<resultMap id="BaseResultMap" type="com.tree.ztreedemo.pojo.ecej.CcBillTargetPo">
+		<id column="bill_target_id" property="billTargetId" />
+		<result column="type" property="type" />
+		<result column="pid" property="pid" />
+		<result column="name" property="name" />
+		<result column="enname" property="enname" />
+		<result column="state" property="state" />
+		<result column="level" property="level" />
+		<result column="sort" property="sort" />
+		<result column="enterprise_code" property="enterpriseCode" />
+		<result column="city_code" property="cityCode" />
+		<result column="del_flag" property="delFlag" />
+		<result column="create_time" property="createTime" />
+		<result column="update_time" property="updateTime" />
+	</resultMap>
+
+	<sql id="Table_Name">
+		cc_bill_target
+	</sql>
+
+	<sql id="Base_Column">
+		bill_target_id,
+		type,
+		pid,
+		name,
+		enname,
+		state,
+		level,
+		sort,
+		enterprise_code,
+		city_code,
+		del_flag,
+		create_time,
+		update_time
+	</sql>
+
+	<sql id="Base_Where">
+		<trim suffixOverrides="AND">
+		<if test="billTargetId != null">
+			bill_target_id= #{billTargetId}
+	           AND 
+		</if>
+		<if test="type != null">
+			type= #{type}
+	           AND 
+		</if>
+		<if test="pid != null">
+			pid= #{pid}
+	           AND 
+		</if>
+		<if test="name != null">
+			name= #{name}
+	           AND 
+		</if>
+		<if test="enname != null">
+			enname= #{enname}
+	           AND 
+		</if>
+		<if test="state != null">
+			state= #{state}
+	           AND 
+		</if>
+		<if test="level != null">
+			level= #{level}
+	           AND 
+		</if>
+		<if test="sort != null">
+			sort= #{sort}
+	           AND 
+		</if>
+		<if test="enterpriseCode != null">
+			enterprise_code= #{enterpriseCode}
+	           AND 
+		</if>
+		<if test="cityCode != null">
+			city_code= #{cityCode}
+	           AND 
+		</if>
+		<if test="delFlag != null">
+			del_flag= #{delFlag}
+	           AND 
+		</if>
+		<if test="createTime != null">
+			create_time= #{createTime}
+	           AND 
+		</if>
+		<if test="updateTime != null">
+			update_time= #{updateTime}
+		</if>
+		</trim>
+	</sql>
+	
+    <sql id="Base_Select">
+			select
+		<include refid="Base_Column" />
+		from
+		<include refid="Table_Name" />
+		<where>
+			<include refid="Base_Where" />
+		</where>
+	</sql>
+
+
+
+	<insert id="insert" parameterType="com.tree.ztreedemo.pojo.ecej.CcBillTargetPo" useGeneratedKeys="true" keyProperty="billTargetId">
+		insert into
+		<include refid="Table_Name" />
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+	<if test="billTargetId != null">
+		bill_target_id,
+	</if>
+	<if test="type != null">
+		type,
+	</if>
+	<if test="pid != null">
+		pid,
+	</if>
+	<if test="name != null">
+		name,
+	</if>
+	<if test="enname != null">
+		enname,
+	</if>
+	<if test="state != null">
+		state,
+	</if>
+	<if test="level != null">
+		level,
+	</if>
+	<if test="sort != null">
+		sort,
+	</if>
+	<if test="enterpriseCode != null">
+		enterprise_code,
+	</if>
+	<if test="cityCode != null">
+		city_code,
+	</if>
+	<if test="delFlag != null">
+		del_flag,
+	</if>
+	<if test="createTime != null">
+		create_time,
+	</if>
+	<if test="updateTime != null">
+		update_time,
+	</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+	<if test="billTargetId != null">
+		#{billTargetId},
+	</if>
+	<if test="type != null">
+		#{type},
+	</if>
+	<if test="pid != null">
+		#{pid},
+	</if>
+	<if test="name != null">
+		#{name},
+	</if>
+	<if test="enname != null">
+		#{enname},
+	</if>
+	<if test="state != null">
+		#{state},
+	</if>
+	<if test="level != null">
+		#{level},
+	</if>
+	<if test="sort != null">
+		#{sort},
+	</if>
+	<if test="enterpriseCode != null">
+		#{enterpriseCode},
+	</if>
+	<if test="cityCode != null">
+		#{cityCode},
+	</if>
+	<if test="delFlag != null">
+		#{delFlag},
+	</if>
+	<if test="createTime != null">
+		#{createTime},
+	</if>
+	<if test="updateTime != null">
+		#{updateTime},
+	</if>
+		</trim>
+	</insert>
+	
+	<insert id="insertList" parameterType="java.util.List" >
+	    /*!mycat:catlet=demo.catlets.BatchInsertSequence */
+	    insert into 
+		<include refid="Table_Name" />
+			(	
+
+					type
+			           ,
+
+					pid
+			           ,
+
+					name
+			           ,
+
+					enname
+			           ,
+
+					state
+			           ,
+
+					level
+			           ,
+
+					sort
+			           ,
+
+					enterprise_code
+			           ,
+
+					city_code
+			           ,
+
+					del_flag
+			           ,
+
+					create_time
+			           ,
+
+					update_time
+			) 
+	    values
+	    <foreach collection="list" item="item" separator=",">
+			(	
+
+						#{item.type}
+				           ,
+
+						#{item.pid}
+				           ,
+
+						#{item.name}
+				           ,
+
+						#{item.enname}
+				           ,
+
+						#{item.state}
+				           ,
+
+						#{item.level}
+				           ,
+
+						#{item.sort}
+				           ,
+
+						#{item.enterpriseCode}
+				           ,
+
+						#{item.cityCode}
+				           ,
+
+						#{item.delFlag}
+				           ,
+
+						#{item.createTime}
+				           ,
+
+						#{item.updateTime}
+			)
+	    </foreach>
+	 </insert>
+
+	<update id="update" parameterType="com.tree.ztreedemo.pojo.ecej.CcBillTargetPo">
+		update
+		<include refid="Table_Name" />
+		<set>
+	<if test="billTargetId != null">
+		bill_target_id=#{billTargetId},
+	</if>
+	<if test="type != null">
+		type=#{type},
+	</if>
+	<if test="pid != null">
+		pid=#{pid},
+	</if>
+	<if test="name != null">
+		name=#{name},
+	</if>
+	<if test="enname != null">
+		enname=#{enname},
+	</if>
+	<if test="state != null">
+		state=#{state},
+	</if>
+	<if test="level != null">
+		level=#{level},
+	</if>
+	<if test="sort != null">
+		sort=#{sort},
+	</if>
+	<if test="enterpriseCode != null">
+		enterprise_code=#{enterpriseCode},
+	</if>
+	<if test="cityCode != null">
+		city_code=#{cityCode},
+	</if>
+	<if test="delFlag != null">
+		del_flag=#{delFlag},
+	</if>
+	<if test="createTime != null">
+		create_time=#{createTime},
+	</if>
+	<if test="updateTime != null">
+		update_time=#{updateTime},
+	</if>
+		</set>
+		where 
+			      bill_target_id=#{billTargetId}
+	</update>
+
+	<update id="updateByEntity" parameterType="com.tree.ztreedemo.pojo.ecej.CcBillTargetPo">
+		UPDATE
+		<include refid="Table_Name" />
+		<set>
+			<if test="s.type != null">
+                    type=#{s.type},
+			</if>
+			<if test="s.pid != null">
+                    pid=#{s.pid},
+			</if>
+			<if test="s.name != null">
+                    name=#{s.name},
+			</if>
+			<if test="s.enname != null">
+                    enname=#{s.enname},
+			</if>
+			<if test="s.state != null">
+                    state=#{s.state},
+			</if>
+			<if test="s.level != null">
+                    level=#{s.level},
+			</if>
+			<if test="s.sort != null">
+                    sort=#{s.sort},
+			</if>
+			<if test="s.enterpriseCode != null">
+                    enterprise_code=#{s.enterpriseCode},
+			</if>
+			<if test="s.cityCode != null">
+                    city_code=#{s.cityCode},
+			</if>
+			<if test="s.delFlag != null">
+                    del_flag=#{s.delFlag},
+			</if>
+			<if test="s.createTime != null">
+                    create_time=#{s.createTime},
+			</if>
+			<if test="s.updateTime != null">
+                    update_time=#{s.updateTime}
+			</if>
+		</set>
+		<where> 
+			<trim prefix="(" suffix=")" suffixOverrides="AND">
+			<if test="w.billTargetId != null">
+                    bill_target_id=#{w.billTargetId}
+	                   AND 
+ 			</if>
+			<if test="w.type != null">
+                    type=#{w.type}
+	                   AND 
+ 			</if>
+			<if test="w.pid != null">
+                    pid=#{w.pid}
+	                   AND 
+ 			</if>
+			<if test="w.name != null">
+                    name=#{w.name}
+	                   AND 
+ 			</if>
+			<if test="w.enname != null">
+                    enname=#{w.enname}
+	                   AND 
+ 			</if>
+			<if test="w.state != null">
+                    state=#{w.state}
+	                   AND 
+ 			</if>
+			<if test="w.level != null">
+                    level=#{w.level}
+	                   AND 
+ 			</if>
+			<if test="w.sort != null">
+                    sort=#{w.sort}
+	                   AND 
+ 			</if>
+			<if test="w.enterpriseCode != null">
+                    enterprise_code=#{w.enterpriseCode}
+	                   AND 
+ 			</if>
+			<if test="w.cityCode != null">
+                    city_code=#{w.cityCode}
+	                   AND 
+ 			</if>
+			<if test="w.delFlag != null">
+                    del_flag=#{w.delFlag}
+	                   AND 
+ 			</if>
+			<if test="w.createTime != null">
+                    create_time=#{w.createTime}
+	                   AND 
+ 			</if>
+			<if test="w.updateTime != null">
+                    update_time=#{w.updateTime}
+ 			</if>
+			</trim>
+		</where>
+	</update>
+
+	<delete id="delete" parameterType="com.tree.ztreedemo.pojo.ecej.CcBillTargetPo">
+		delete from
+		<include refid="Table_Name" />
+		<where>
+			<include refid="Base_Where" />
+		</where>
+	</delete>
+
+	<select id="count" parameterType="java.util.Map" resultType="int">
+		select count(1) from
+		<include refid="Table_Name" />
+		<where>
+			<include refid="Base_Where" />
+		</where>
+	</select>
+
+	<select id="selectOne" parameterType="com.tree.ztreedemo.pojo.ecej.CcBillTargetPo" resultMap="BaseResultMap">
+	  <include refid="Base_Select" />
+	</select>
+
+	<select id="selectList"  parameterType="com.tree.ztreedemo.pojo.ecej.CcBillTargetPo" resultMap="BaseResultMap">
+	    <include refid="Base_Select" />
+	</select>
+		
+
+     <select id="selectForUpdate" parameterType="com.tree.ztreedemo.pojo.ecej.CcBillTargetPo" resultMap="BaseResultMap" useCache="false">
+		 <include refid="Base_Select" />
+		for update
+	</select>
+	
+
+</mapper>

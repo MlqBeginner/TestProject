@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>创建手机号</title>
+    <script type='text/javascript' th:src='@{/ecej/core/jquery-3.2.0.min.js}'></script>
+    <script type='text/javascript' th:src='@{/ecej/core/layer-v3.0.3/layer.js}'></script>
+    <script type='text/javascript' th:src='@{/ecej/script/common/layer-extend.js}'></script>
+    <script type="text/javascript" th:src="@{/ecej/phone.js}"></script>
+</head>
+<body>
+<div>
+    <div style=" margin-bottom: 5px;">
+        <p style="font-size: 12px;margin: 1px;">用于通知【抢险单创建短信订阅者】之外也需知情的人员</p>
+        <a id="addPhone" href="javascript:void(0);">+ 添加被通知人</a>
+    </div>
+    <div id="container">
+        <div style="display: flex;margin-bottom: 7px">
+            <input name="cellPhoneNumber" value="">
+            <img class="del_phone" src="../../ecej/imgs/u52.png" style="width: 20px;height: 20px;margin-left: 9px;">
+        </div>
+        <img style="display: flex;margin-bottom: 7px">
+            <input name="cellPhoneNumber" value="">
+            <img class="del_phone" src="../../ecej/imgs/u52.png" style="width: 20px;height: 20px;margin-left: 9px;"/>
+        </div>
+    </div>
+    <div>
+        <button id="have">获取</button>
+    </div>
+</div>
+</body>
+</html>

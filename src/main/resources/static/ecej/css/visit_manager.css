@@ -1,0 +1,320 @@
+::-webkit-input-placeholder{
+  color: #9babbf;
+}
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.clearfix{
+    zoom: 1;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+
+
+.container{
+    padding: 20px;
+    background: #f1f2f7;
+}
+.main{
+    padding: 20px 0 0 20px;
+    background: #fff;
+}
+/* 问卷调查头部开始 */
+.questionnaire{
+    /* width: 740px; */
+    padding-left: 20px;
+    margin-bottom: 26px;
+}
+.questionnaire_row{
+    margin-bottom: 20px;
+}
+.row_name{
+    width: 74px;
+    line-height: 34px;
+    font-size: 14px;
+    color: #333;
+}
+.row_text{
+    width: 480px;
+    height: 34px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: 1px solid #cad4de;
+    border-radius: 4px;
+}
+.row_edit_text{
+    resize: none;
+    width: 480px;
+    height: 90px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: 1px solid #cad4de;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.questionnaire_row .row_choose{
+    position: relative;
+    width: 240px;
+    height: 34px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: 1px solid #cad4de;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.questionnaire_row .row_choose .please_choose{
+    position: relative;
+    width: 100%;
+    line-height: 32px;
+    font-size: 12px;
+    color: #9babbf;
+}
+.questionnaire_row .row_choose .active_choose{
+    color: #222;
+}
+.questionnaire_row .row_choose .please_choose:after{
+    position: absolute;
+    right: 9px;
+    top: 15px;
+    content: "";
+    display: block;
+    width: 0;
+    border-top: 6px solid #bfcbd8;
+    border-right: 6px solid #fff;
+    border-left: 6px solid #fff;
+}
+.questionnaire_row .row_choose .choose_item_total{
+    display: none;
+    position: absolute;
+    left: -1px;
+    top: 32px;
+    width: 210px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: 1px solid #cad4de;
+    border-radius: 4px;
+    background: #fff;
+}
+.questionnaire_row .row_choose .choose_item_total .choose_item{
+    line-height: 32px;
+}
+.row_setting{
+    /* width: 666px; */
+}
+.row_setting .setting{
+    width: 105px;
+    height: 24px;
+    margin-top: 5px;
+    border-radius: 4px;
+    text-align: center;
+    background: #2ca2fc;
+    font-size: 14px;
+    color: #fff;
+}
+.row_setting .relate_word .relate_row{
+    line-height: 24px;
+    font-size: 12px;
+}
+.relate_row .list_name{
+    width: 76px;
+}
+.relate_row .list_content{
+    width: 590px;
+}
+.relate_row .list_content .list_item{
+    float: left;
+    margin-right: 10px;
+    color: #666;
+}
+/* 问卷调查头部结束 */
+
+/* 问卷调查尾部问题区域开始 */
+.question_summary .question{
+    position: relative;
+    width: 784px;
+    padding-left: 20px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccd6e0;
+    border-radius: 4px;
+}
+.question .remove_question{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.question_row{
+    margin-bottom: 20px;
+}
+.question_relate_row{
+    margin-bottom: 10px;
+}
+.question_row .row_check{
+    padding-top: 10px;
+}
+.question_row .row_check .check_item{
+    position: relative;
+    padding-left: 24px;
+    margin-right: 50px;
+    line-height: 100%;
+    font-size: 13px;
+    cursor: pointer;
+}
+.question_row .row_check .check_item:after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 1px solid #a4a4a4;
+}
+.question_row .row_check .active_check_item:after{
+    border: 5px solid #0084eb;
+}
+.new_option_row .row_text{
+    margin-left: 74px;
+}
+.question_row input.row_text, .question_row textarea.row_blend_text{
+    font-size: 14px;
+    color: #aab7c8;
+}
+.row_jump_number{
+    width: 110px;
+    height: 34px;
+    padding-left: 10px;
+    margin: 0 10px;
+    box-sizing: border-box;
+    border: 1px solid #cad4de;
+    border-radius: 4px;
+}
+.option_row_one{
+    margin-bottom: 10px;
+}
+.row_remove, .remove_remark, .add_remark{
+    line-height: 34px;
+    font-size: 14px;
+    color: #2b3dfb;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.remove_remark, .add_remark{
+    font-size: 12px;
+}
+.add_option_row{
+    margin-bottom: 20px;
+}
+.add_remark{
+    margin-left: 74px;
+    line-height: 100%;
+}
+.blend_option_row .blend{
+    margin-left: 52px;
+    margin-right: 10px;
+    font-size: 12px;
+    line-height: 34px;
+}
+.row_blend_text{
+    width: 480px;
+    height: 90px;
+    margin: 0 10px 20px 74px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: 1px solid #cad4de;
+    border-radius: 4px;
+}
+.row_blend_text, .row_text, .row_jump_number{
+    line-height: 32px;
+    font-size: 12px;
+    color: #222;
+}
+.add_btn_group{
+    margin-left: 74px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #2b3dfb;
+}
+.devise{
+   margin: 0 20px;
+}
+.add_new_option, .add_blend_option{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.prompt{
+    margin-left: 74px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 100%;
+    color: #93a4ba;
+}
+.move_btn_group{
+    margin-bottom: 20px;
+}
+.move_btn_group .move_btn{
+    width: 90px;
+    height: 24px;
+    box-sizing: border-box;
+    border: 1px solid #cad4de;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 12px;
+    color: #cad4de;
+}
+.move_btn_group .move_top{
+    margin-right: 50px;
+    color: #68c3de;
+    border-color: #68c3de;
+}
+.move_btn_group .move_down{
+    margin-right: 20px;
+    color: #27cc6a;
+    border-color: #27cc6a;
+}
+.move_btn_group  .disabled_btn{
+    border: 1px solid #cad4de;
+    color: #cad4de;
+}
+
+.btn_group{
+    padding-top: 30px;
+}
+.btn_group .add_new_question{
+    width: 90px;
+    height: 24px;
+    margin: 0 410px 26px 24px;
+    border-radius: 4px;
+    background: #6a73fc;
+    font-size: 12px;
+    color: #fff;
+}
+.btn_group .see_btn, .btn_group .keep_btn{
+    width: 90px;
+    height: 24px;
+    border-radius: 4px;
+    background: #27cc6a;
+    font-size: 12px;
+    color: #fff;
+}
+.btn_group .see_btn{
+    margin-right: 50px;
+}
+.question-btn-disabled{
+	cursor: not-allowed !important;
+    box-shadow: none;
+    opacity: 0.65;
+}
+/* 问卷调查尾部问题区域开始 */

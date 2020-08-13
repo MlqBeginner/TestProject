@@ -1,0 +1,282 @@
+html,
+body {
+	width: 100%;
+	height: 100%;
+	background: #eaebed;
+}
+
+p {
+	font-size: 14px;
+	color: #666;
+}
+
+b {
+	font-size: 14px;
+	color: #666;
+	font-weight: normal;
+}
+
+.pb2 {
+	padding-bottom: 20px;
+}
+
+.pb3 {
+	padding-bottom: 30px;
+}
+
+.header {
+	font-size: 14px;
+	color: #666;
+}
+
+.list-item {
+	width: 100%;
+	margin: 10px 0;
+	background: #fff;
+	color: #666;
+}
+
+.list-item .list-item-header {
+	width: 98%;
+	font-size: 14px;
+	margin: 0 auto;
+	padding-left: 20px;
+	line-height: 50px;
+	font-weight: bold;
+	border-bottom: 2px solid #e5e5e5;
+}
+
+.list-item-content {
+	margin: 0 auto;
+	padding: 10px 0;
+	border-bottom: 1px solid #e5e5e5;
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	width: 98%;
+}
+
+.list-item-content p {
+	padding-left: 15px;
+	line-height: 40px;
+	font-size: 14px;
+}
+
+.el-input__inner {
+	height: 35px;
+}
+
+#app {
+	width: 100%;
+	height: 100%;
+}
+
+.container {
+	width: 97%;
+	height: auto;
+	background: #fff;
+	margin: 30px auto 0 auto;
+}
+
+.header {
+	width: 98%;
+	height: 50px;
+	margin: 5px auto;
+	border-bottom: 1px solid #ccc;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #666;
+}
+
+.right_info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.right_info p {
+	margin: 0 10px;
+	font-size: 14px;
+}
+
+.base_info {
+	color: #666666;
+	width: 96%;
+	margin: 10px auto;
+}
+
+.base_info p {
+	line-height: 35px;
+	font-size: 14px;
+}
+
+.handel_record {
+	color: #666666;
+	background: #fff;
+	width: 100%;
+	height: auto;
+	margin: 10px auto;
+}
+
+.handel_record_header {
+	font-weight: bold;
+	font-size: 14px;
+	width: 98%;
+	height: auto;
+	height: 50px;
+	line-height: 50px;
+	margin: 5px auto;
+	padding-left: 20px;
+	border-bottom: 2px solid #e5e5e5;
+}
+
+.handel_record_list {
+	padding: 20px 0 30px;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.handel_record_item {
+	margin: 0 auto;
+	padding: 10px 0;
+	border-bottom: 1px solid #e5e5e5;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 98%;
+}
+
+.handel_record_item p {
+	width: 20%;
+	font-size: 14px;
+	line-height: 40px;
+	margin: 0 20px;
+}
+
+.operation_wrap {
+	width: 100%;
+	padding: 20px 0;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.operation_wrap .el-button {
+	margin: 0 12px;
+}
+
+.examine_wrap,
+.handel_wrap,
+.toExamine_wrap {
+	width: 100%;
+	background: #fff;
+	margin: 20px auto;
+	font-size: 14px;
+	color: #666;
+}
+
+.tit {
+	width: 98%;
+	border-bottom: 2px solid #e5e5e5;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 20px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.examine_wrap .el-row,
+.handel_wrap .el-row {
+	padding-top: 20px;
+	margin: 0 !important;
+	display: flex;
+	flex-direction: column;
+	margin-left: 15px !important;
+}
+
+.examine_wrap .el-col,
+.handel_wrap .el-col,
+.toExamine_wrap .el-col {
+	display: flex;
+	padding: 0;
+	margin: 20px 0;
+}
+
+.examine_wrap .el-form-item,
+.handel_wrap .el-form-item,
+.toExamine_wrap .el-form-item {
+	margin-bottom: 0 !important;
+}
+
+.examine_wrap .el-form-item .el-textarea,
+.handel_wrap .el-form-item .el-textarea {
+	width: 400px;
+}
+
+.examine_wrap .el-form-item .el-input,
+.handel_wrap .el-form-item .el-input {
+	width: 260px;
+}
+
+.handel_btn_wrap {
+	width: 100%;
+	padding: 20px 0;
+	text-align: center;
+}
+
+.handel_btn_wrap .el-button {
+	margin: 0 12px;
+}
+
+.callType {
+	color: #fff;
+	font-size: 12px;
+	padding: 3px 4px;
+}
+
+.call-type-huru-btn {
+	background: #FFC90E;
+}
+
+.call-type-huchu-btn {
+	background: #B5E61D;
+}
+
+.call-type-nocti-btn {
+	background: #A349A4;
+}
+
+.determineWrapper {
+	position: relative;
+}
+
+.determineWrapper b {
+	color: #F56C6C;
+	position: absolute;
+	top: 15px;
+}
+
+.berforContent .el-form-item__label::before {
+	content: '*';
+	color: #F56C6C;
+	margin-right: 4px;
+}
+
+.audioBtn {
+	width: 52px;
+	height: 23px;
+	margin: 0 5px;
+	box-sizing: border-box;
+	line-height: 20px;
+	text-align: center;
+	background: #fff;
+	border-radius: 2px;
+	border: 1px solid #6876DA;
+	font-size: 14px;
+	color: #6876DA;
+	cursor: pointer;
+	outline: none;
+}

@@ -1,0 +1,20 @@
+package static.core.webuploader - 0.1 static.core.webuploader - 0.1
+{
+	import flash.events.Event;
+	
+	public class FilePickerEvent extends Event
+	{
+		public static const SELECT:String = 'filepickerselect';
+		public static const CANCEL:String = 'filepickercancel';
+		public static const OPEN:String = 'filepickeropen';
+		
+		public var data:*;
+		
+		public function FilePickerEvent(type:String, data:* = false)
+		{
+			this.data = data;
+			super(type, false, false);
+		}
+		
+	}
+}

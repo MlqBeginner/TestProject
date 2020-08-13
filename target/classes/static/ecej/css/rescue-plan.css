@@ -1,0 +1,64 @@
+#app {
+  width: 100%;
+  height: 100%
+}
+
+.el-select {
+  width: 170px;
+  margin: 0 5px;
+}
+
+.el-form {
+  text-align: center;
+  padding: 15px 20px;
+}
+
+.card-wrap {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.card-wrap li {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 120px;
+  margin: 0 10px;
+  border-radius: 10px;
+  background: #409EFF;
+  text-align: center;
+}
+
+.card-wrap li h1 {
+  color: #fff;
+  font-size: 20px;
+  line-height: 30px;
+  padding-top: 10px;
+}
+
+.card-wrap li span {
+  color: #fff;
+  font-size: 26px;
+  padding: 10px 0;
+}
+
+.export {
+  width: 96%;
+  margin: 10px auto 30px auto;
+}
+
+.table-wrap {
+  width: 96%;
+  height: 500px;
+  margin: 10px auto 0 auto;
+  padding-top: 20px
+}
+
+.el-pagination {
+  margin-top: 20px;
+  float: right;
+}

@@ -1,0 +1,137 @@
+::-webkit-scrollbar-track-piece {
+	background-color: rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+	height: 5px;
+	background-color: rgba(125, 125, 125, 0.7);
+	-webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+	width: 5px;
+	background-color: rgba(125, 125, 125, 0.7);
+	-webkit-border-radius: 6px;
+}
+
+.container {
+	width: 97%;
+	height: 100%;
+	background: #fff;
+	margin: 30px auto 0 auto;
+}
+
+.header {
+	height: 40px;
+	line-height: 40px;
+	color: #666;
+	width: 96%;
+	margin: 0 auto;
+	border-bottom: 1px solid #ccc;
+}
+
+.formContainer {
+	height: auto;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.el-row {
+	width: 100%;
+	padding: 20px 0 0;
+	margin: 0 !important;
+}
+
+.el-col {
+	height: 55px !important;
+	padding: 0 !important;
+}
+
+.formContainer .el-input__inner,
+.el-dialog__wrapper .el-input__inner {
+	height: 35px;
+	/* width: 210px; */
+}
+
+.bill_list {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.bill_list li {
+	width: 58px;
+	height: 28px;
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	color: #666;
+	margin-top: 5px;
+	border: 1px solid #ccc;
+	position: relative;
+}
+
+.bill_list li em {
+	position: absolute;
+	right: -10px;
+	top: -10px;
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	font-size: 12px;
+	font-style: normal;
+	border-radius: 50%;
+	background: #f56c6c;
+	color: #fff;
+}
+
+.table_list .el-button+.el-button {
+	margin-left: 0px;
+}
+
+.el-date-editor {
+	width: 190px !important;
+}
+
+.export {
+	width: 98%;
+	margin: 20px auto;
+}
+
+.table_list {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.el-pagination {
+	float: right;
+	margin: 20px;
+}
+
+.handelNum {
+	position: absolute;
+	z-index: 999;
+	width: 23px;
+	height: 23px;
+	border-radius: 50%;
+	font-size: 12px;
+	background: #F56C6C;
+	text-align: center;
+	line-height: 23px;
+	color: #fff;
+	left: 70px;
+	top: -10px;
+}
+
+.dialogRequred .el-form-item__label::before {
+	content: '*';
+	color: #F56C6C;
+	margin-right: 4px;
+}
+
+.el-dialog__wrapper .el-radio-group .el-radio {
+	margin: 10px 15px 0 0;
+}

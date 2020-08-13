@@ -1,0 +1,39 @@
+.hselect{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+.hselect .fa-angle-down{
+    position: absolute;
+    top: 8px;
+    right: 2px;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    font-size: 16px;
+    color: #333;
+}
+.hselect_content{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index:9999;
+    box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.hselect_content li{
+    padding: 0 14px;
+}
+.hselect_content li:hover{
+    background: #eee;
+}
+.hselect_content li.active{
+    background: #eee;
+}

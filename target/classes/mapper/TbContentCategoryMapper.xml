@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">		
+<mapper namespace="com.tree.ztreedemo.pojo.my.TbContentCategoryPo">
+  <resultMap id="BaseResultMap" type="com.tree.ztreedemo.pojo.my.TbContentCategoryPo">
+	<id column="id" property="id" />
+	<result column="parent_id" property="parentId" />
+	<result column="name" property="name" />
+	<result column="status" property="status" />
+	<result column="sort_order" property="sortOrder" />
+	<result column="is_parent" property="isParent" />
+	<result column="created" property="created" />
+	<result column="updated" property="updated" />
+  </resultMap>
+
+  <sql id="Table_Name">
+    tb_content_category
+  </sql>
+  
+  <sql id="Base_Column">
+	id,
+	parent_id,
+	name,
+	status,
+	sort_order,
+	is_parent,
+	created,
+	updated
+  </sql>
+  
+  <sql id="Base_Where">
+    <trim suffixOverrides="AND">
+      <if test="id != null">
+        id=#{id}
+        AND 
+      </if>
+      <if test="parentId != null">
+        parent_id=#{parentId}
+        AND 
+      </if>
+      <if test="name != null">
+        name=#{name}
+        AND 
+      </if>
+      <if test="status != null">
+        status=#{status}
+        AND 
+      </if>
+      <if test="sortOrder != null">
+        sort_order=#{sortOrder}
+        AND 
+      </if>
+      <if test="isParent != null">
+        is_parent=#{isParent}
+        AND 
+      </if>
+      <if test="created != null">
+        created=#{created}
+        AND 
+      </if>
+      <if test="updated != null">
+        updated=#{updated}
+      </if>
+    </trim>
+  </sql>
+  
+  <sql id="Base_Select">
+    select
+    <include refid="Base_Column" />
+    from
+    <include refid="Table_Name" />
+    <where>
+      <include refid="Base_Where" />
+    </where>
+  </sql>
+	
+  <!-- 单条插入 -->
+  <insert id="insert" parameterType="com.tree.ztreedemo.pojo.my.TbContentCategoryPo" useGeneratedKeys="true" keyProperty="id">
+    insert into
+    <include refid="Table_Name" />
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+	  <if test="id != null">
+		id,
+	  </if>
+	  <if test="parentId != null">
+		parent_id,
+	  </if>
+	  <if test="name != null">
+		name,
+	  </if>
+	  <if test="status != null">
+		status,
+	  </if>
+	  <if test="sortOrder != null">
+		sort_order,
+	  </if>
+	  <if test="isParent != null">
+		is_parent,
+	  </if>
+	  <if test="created != null">
+		created,
+	  </if>
+	  <if test="updated != null">
+		updated,
+	  </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+	  <if test="id != null">
+		#{id},
+	  </if>
+	  <if test="parentId != null">
+		#{parentId},
+	  </if>
+	  <if test="name != null">
+		#{name},
+	  </if>
+	  <if test="status != null">
+		#{status},
+	  </if>
+	  <if test="sortOrder != null">
+		#{sortOrder},
+	  </if>
+	  <if test="isParent != null">
+		#{isParent},
+	  </if>
+	  <if test="created != null">
+		#{created},
+	  </if>
+	  <if test="updated != null">
+		#{updated},
+	  </if>
+    </trim>
+  </insert>
+  
+  <!-- 批量插入 -->
+  <insert id="insertList" parameterType="java.util.List" >
+	insert into 
+	<include refid="Table_Name" />
+	<trim prefix="(" suffix=")" suffixOverrides=",">
+      parent_id,
+      name,
+      status,
+      sort_order,
+      is_parent,
+      created,
+      updated,
+    </trim>
+	values
+	<foreach collection="list" item="item" separator=",">
+	<trim prefix="(" suffix=")" suffixOverrides=",">
+      #{item.parentId},
+      #{item.name},
+      #{item.status},
+      #{item.sortOrder},
+      #{item.isParent},
+      #{item.created},
+      #{item.updated},
+    </trim>
+	</foreach>
+  </insert>
+  
+  <!-- 根据主键更新 -->
+  <update id="update" parameterType="com.tree.ztreedemo.pojo.my.TbContentCategoryPo">
+	update
+	<include refid="Table_Name" />
+	<set>
+	  <if test="parentId != null">
+		parent_id=#{parentId},
+	  </if>
+	  <if test="name != null">
+		name=#{name},
+	  </if>
+	  <if test="status != null">
+		status=#{status},
+	  </if>
+	  <if test="sortOrder != null">
+		sort_order=#{sortOrder},
+	  </if>
+	  <if test="isParent != null">
+		is_parent=#{isParent},
+	  </if>
+	  <if test="created != null">
+		created=#{created},
+	  </if>
+	  <if test="updated != null">
+		updated=#{updated},
+	  </if>
+	</set>
+	where 
+	 id=#{id}
+  </update>
+	
+  <!-- 根据主键批量更新 -->
+  <update id="updateList" parameterType="java.util.List">
+     <foreach collection="list" item="item" separator=";">
+      update
+	  <include refid="Table_Name" />
+	  <set>
+	  <if test="item.parentId != null">
+		parent_id=#{item.parentId},
+	  </if>
+	  <if test="item.name != null">
+		name=#{item.name},
+	  </if>
+	  <if test="item.status != null">
+		status=#{item.status},
+	  </if>
+	  <if test="item.sortOrder != null">
+		sort_order=#{item.sortOrder},
+	  </if>
+	  <if test="item.isParent != null">
+		is_parent=#{item.isParent},
+	  </if>
+	  <if test="item.created != null">
+		created=#{item.created},
+	  </if>
+	  <if test="item.updated != null">
+		updated=#{item.updated},
+	  </if>
+	  </set>
+	  where 
+	   id=#{item.id}
+     </foreach>
+  </update>
+  
+  <!-- 
+  <delete id="delete" parameterType="com.tree.ztreedemo.pojo.my.TbContentCategoryPo">
+     delete from
+     <include refid="Table_Name" />
+     <where>
+	   id=#{id}
+    </where>
+  </delete>
+  
+  <delete id="deleteList" parameterType="java.util.List" >
+    <foreach collection="list" item="item" separator=";">  
+	delete from
+	<include refid="Table_Name" />
+	where 
+	  id=#{item.id}
+    </foreach>
+  </delete>
+  -->
+  
+  <!-- 查询单表符合条件总条数 -->
+  <select id="count" parameterType="com.tree.ztreedemo.pojo.my.TbContentCategoryPo" resultType="int">
+   select count(1) from
+   <include refid="Table_Name" />
+   <where>
+   <include refid="Base_Where" />
+   </where>
+   </select>
+  
+  <!-- 查询符合条件的一条记录 -->
+  <select id="selectOne" parameterType="com.tree.ztreedemo.pojo.my.TbContentCategoryPo" resultMap="BaseResultMap">
+     <include refid="Base_Select" />
+     limit 1
+   </select>
+   
+  <!-- 查询符合条件的记录 -->
+  <select id="selectList" parameterType="com.tree.ztreedemo.pojo.my.TbContentCategoryPo" resultMap="BaseResultMap">
+     <include refid="Base_Select" />
+   </select>
+   
+  <!-- 查询符合条件的记录  锁定符合条件的行-->
+  <select id="selectForUpdate" parameterType="com.tree.ztreedemo.pojo.my.TbContentCategoryPo" resultMap="BaseResultMap">
+     <include refid="Base_Select" />
+     for update
+   </select>
+   
+</mapper>

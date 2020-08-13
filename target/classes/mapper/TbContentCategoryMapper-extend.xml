@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">		
+<mapper namespace="com.tree.ztreedemo.pojo.my.TbContentCategoryPo">
+
+  <resultMap id="ResultMap" type="com.tree.ztreedemo.pojo.my.TbContentCategoryVo" extends="BaseResultMap">
+
+  </resultMap>
+
+
+	<select id="recursionList" parameterType="com.tree.ztreedemo.pojo.my.TbContentCategoryVo" resultMap="ResultMap">
+		<include refid="Base_Select" />
+	</select>
+   
+</mapper>

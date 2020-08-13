@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>咨询单日志弹窗</title>
+    <link rel='stylesheet' type="text/css" th:href='@{/ecej/core/layui-1.0.9/css/layui.css}'/>
+    <link rel='stylesheet' type="text/css" th:href='@{/ecej/css/layui_extend.css}'/>
+    <script type='text/javascript' th:src='@{/ecej/core/jquery-3.2.0.min.js}'></script>
+    <script type='text/javascript' th:src='@{/ecej/core/layer-v3.0.3/layer.js}'></script>
+    <script type='text/javascript' th:src='@{/ecej/core/layui-1.0.9/layui.js}'></script>
+    <script type='text/javascript' th:src='@{/ecej/script/common/jquery-extend.js}'></script>
+    <script type='text/javascript' th:src='@{/ecej/script/common/layer-extend.js}'></script>
+    <script type="text/javascript" th:src="@{/ecej/bill_question_detail_log.js}"></script>
+</head>
+<body>
+<button id="btn">日志弹窗</button>
+
+<div id="box_content" style="display:none;">
+    <table class="layui-table">
+        <colgroup>
+            <col width="150"/>
+            <col width="150"/>
+            <col/>
+            <col width="150"/>
+        </colgroup>
+        <thead>
+        <tr>
+            <th style="text-align: center">操作时间</th>
+            <th style="text-align: center">操作类型</th>
+            <th style="text-align: center">修改备注(修改原因或修改内容说明)</th>
+            <th style="text-align: center">操作人</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td colspan="4">正在努力加载...<img style="width: 21px;" src="../../ecej/imgs/loading.gif"/></td>
+        </tr>
+        <!--<tr>-->
+            <!--<td>2020-07-08 20:02:30</td>-->
+            <!--<td>修改</td>-->
+            <!--<td>之前记录错误，特把四级分类由漏气 改为 不通气；</td>-->
+            <!--<td>limin</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>2020-06-30 17:48:34</td>-->
+            <!--<td>创建</td>-->
+            <!--<td>&#45;&#45;</td>-->
+            <!--<td>limin</td>-->
+        <!--</tr>-->
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

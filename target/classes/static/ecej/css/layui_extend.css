@@ -1,0 +1,16 @@
+/**layui 样式扩展*/
+.layui-extend-submit-btn{
+	border-color: #4898d5;
+	width: 60px;height: 30px;
+	font-size: 14px;
+	background-color: #2e8ded;
+	line-height:30px
+}
+.layui-extend-cancel-btn{
+	border: 1px solid #dedede;
+	background-color: #f1f1f1;
+	width: 60px;
+	height: 30px;
+	font-size: 14px;
+	line-height:30px
+}

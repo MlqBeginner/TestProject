@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉框多选</title>
+
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" >
+
+    <script type='text/javascript' th:src='@{/ecej/core/jquery-3.2.0.min.js}'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" ></script>
+
+    <link rel='stylesheet' type="text/css" th:href='@{/ecej/core/bootstrap-select-1.13.14/bootstrap-select.min.css}'/>
+    <script type='text/javascript' th:src='@{/ecej/core/bootstrap-select-1.13.14/bootstrap-select.js}'></script>
+
+    <script type='text/javascript' th:src='@{/ecej/multipleSelect.js}'></script>
+
+</head>
+<body>
+<h1>【更多官网地址】https://developer.snapappointments.com/bootstrap-select/examples/</h1>
+<fieldset>
+    <legend>bootstrap-select 多选下拉框</legend>
+    <div class="form-controls" style="width: 300px;">
+        <select class="selectpicker show-tick form-control" multiple="multiple" title="请选择工厂" data-size="10"
+                data-selected-text-format="count > 15"
+                data-live-search="true" data-live-search-placeholder="搜索"
+                data-actions-box="true" data-select-all-text="全选" data-deselect-all-text="重置"
+                id="xinghao_id" name="xinghao_id" value="{$info.xinghao_id}">
+        </select>
+    </div>
+</fieldset>
+<button id="btn">获取</button>
+<hr/>
+<fieldset>
+    <legend>bootstrap-select 标准选择框</legend>
+    <select class="selectpicker">
+        <option>Mustard</option>
+        <option>Ketchup</option>
+        <option>Relish</option>
+    </select>
+</fieldset>
+<hr/>
+
+<fieldset>
+    <legend>bootstrap-select 选择带有optgroup的框</legend>
+    <select class="selectpicker">
+        <optgroup label="Picnic">
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+        </optgroup>
+        <optgroup label="Camping">
+            <option>Tent</option>
+            <option>Flashlight</option>
+            <option>Toilet Paper</option>
+        </optgroup>
+    </select>
+</fieldset>
+<hr/>
+
+<fieldset>
+    <legend>bootstrap-select 多个选择框</legend>
+    <select class="selectpicker" multiple>
+        <option>Mustard</option>
+        <option>Ketchup</option>
+        <option>Relish</option>
+    </select>
+</fieldset>
+<hr/>
+
+<fieldset>
+    <legend>bootstrap-select 即时搜寻  您可以通过传递data-live-search="true" 属性来添加搜索输入  ：</legend>
+    <select class="selectpicker" data-live-search="true" multiple>
+        <option>Mustard</option>
+        <option>Ketchup</option>
+        <option>Relish</option>
+    </select>
+</fieldset>
+<hr/>
+
+<fieldset>
+    <legend>bootstrap-select 关键词  使用选项将关键字添加到选项中以提高其可搜索性  data-tokens。</legend>
+    <select class="selectpicker" data-live-search="true">
+        <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+        <option data-tokens="mustard">Burger, Shake and a Smile</option>
+        <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+    </select>
+</fieldset>
+<hr/>
+
+<fieldset>
+    <legend>bootstrap-select 限制选择数量  限制可以通过data-max-options 属性选择的选项数量  。它也适用于选项组。使用定制达到极限时显示的消息  maxOptionsText。</legend>
+    <select class="selectpicker" multiple data-max-options="2">
+        <option>Mustard</option>
+        <option>Ketchup</option>
+        <option>Relish</option>
+    </select>
+
+    <select class="selectpicker" multiple>
+        <optgroup label="Condiments" data-max-options="2">
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+        </optgroup>
+        <optgroup label="Breads" data-max-options="2">
+            <option>Plain</option>
+            <option>Steamed</option>
+            <option>Toasted</option>
+        </optgroup>
+    </select>
+</fieldset>
+<hr/>
+
+</body>
+</html>
