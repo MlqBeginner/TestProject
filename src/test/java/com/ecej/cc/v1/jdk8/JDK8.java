@@ -73,6 +73,7 @@ public class JDK8 {
         List<Integer> intList = Lists.newArrayList(1, 2, 3, 4, 5, 6, 7, 8);
         List<List<Integer>> subs = ListUtils.partition(intList, 3);
         System.out.println(subs.size());
+        System.out.println(22);
     }
 
     /**
