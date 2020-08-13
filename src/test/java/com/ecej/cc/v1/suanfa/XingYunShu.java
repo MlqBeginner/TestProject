@@ -19,6 +19,7 @@ public class XingYunShu {
         }
         long endTime = System.currentTimeMillis();
         System.out.println("程序运行时间：" + (endTime - startTime) + "ms");
+        System.out.println(22);
     }
 
     // 判断是否为幸运数
