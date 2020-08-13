@@ -13,6 +13,7 @@ public class TestMain {
     public void demo() {
         System.out.println(33);
         System.out.println(33);
+        System.out.println(33);
     }
 
     @Test
