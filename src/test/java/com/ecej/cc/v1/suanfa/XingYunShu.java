@@ -21,7 +21,7 @@ public class XingYunShu {
         System.out.println("程序运行时间：" + (endTime - startTime) + "ms");
         System.out.println(22);
         System.out.println(55);
-        //chaixizhogceshi2222222222
+        //chaixizhogceshi22222222223333333
     }
 
     // 判断是否为幸运数
