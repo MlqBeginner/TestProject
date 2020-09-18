@@ -13,21 +13,6 @@ public class TestMain {
     public void demo() {
         System.out.printf("1111111");
         System.out.printf("1111111");
-        System.out.printf("1111111"); System.out.printf("1111111");
-        System.out.printf("1111111");
-        System.out.printf("1111111");
-        System.out.printf("1111111"); System.out.printf("1111111");
-        System.out.printf("1111111");
-        System.out.printf("1111111");
-        System.out.printf("1111111"); System.out.printf("1111111");
-        System.out.printf("1111111");
-        System.out.printf("1111111");
-        System.out.printf("1111111"); System.out.printf("1111111");
-        System.out.printf("1111111");
-        System.out.printf("1111111"); System.out.printf("1111111");
-        System.out.printf("1111111");
-        System.out.printf("1111111");
-        System.out.printf("1111111"); System.out.printf("1111111");
 
 
     }
