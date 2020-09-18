@@ -14,6 +14,9 @@ public class TestMain {
         System.out.printf("1111111");
         System.out.printf("1111111");
         System.out.printf("1111111"); System.out.printf("1111111");
+        System.out.printf("1111111");
+        System.out.printf("1111111");
+        System.out.printf("1111111"); System.out.printf("1111111");
 
     }
 
