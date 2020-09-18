@@ -11,7 +11,7 @@ public class TestMain {
 
     @Test
     public void demo() {
-
+        System.out.printf("1111111");
     }
 
     @Test
