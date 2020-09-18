@@ -11,24 +11,7 @@ public class TestMain {
 
     @Test
     public void demo() {
-        System.out.println(33);
 
-        System.out.println(33);
-        System.out.println(33);
-        System.out.println(33);
-        System.out.println(33);
-        System.out.println(33);
-        System.out.println(33);
-        System.out.println(33);
-        System.out.println(33);
-
-        System.out.println(11);
-        System.out.println(22);
-        System.out.println(33);
-        System.out.println(44);
-        System.out.println(55);
-//chaixizhongceshi2222
-        System.out.println(22);
     }
 
     @Test
